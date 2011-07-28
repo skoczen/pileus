@@ -1,6 +1,6 @@
 {% extends "marketing_site/base.html" %}
 {% load i18n cache %}
-{% block title %}Contact, volunteer, and donor management just for small nonprofits{% endblock %}
+{% block meta_title %}Contact, volunteer, and donor management just for small nonprofits{% endblock %}
 {% block description %}GoodCloud makes it easier to run your small nonprofit. Track people, donations, volunteers and more - it's superpowers for small nonprofits!{% endblock %}
 {% block extra_body %}class="home_page"{% endblock %}
 
@@ -39,7 +39,7 @@
 			<div class="description png_bg identical_height_block">
 				Sign up for a free trial account in less than 60 seconds. No strings, no hassle, no credit card.
 			</div>
-			<div class="action"><a href="{% url accounts:signup %}">Try GoodCloud now!</a></div>
+			<div class="action"><a href="{% url signup %}">Try GoodCloud now!</a></div>
 		</div>
 	</div>
 	</div>

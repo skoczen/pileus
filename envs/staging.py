@@ -35,7 +35,7 @@ MANUAL_MEDIA_URL = 'http://digitalmycelium.com/media/'
 STATIC_URL = MEDIA_URL
 ADMIN_MEDIA_PREFIX = "/admin-media/"
 FAVICON_URL = "%simages/favicon.png" % MEDIA_URL
-
+ADMIN_MEDIA_PREFIX = STATIC_URL + "grappelli/"
 
 BROKER_HOST = "int-Redis.digitalmycelium.com"  # Maps to redis host.
 BROKER_VHOST = "6"                       # Maps to database number.
@@ -75,3 +75,7 @@ try:
 except:
     GIT_CURRENT_SHA = Repo(PROJECT_ROOT).head.reference.commit.hexsha
 MEDIASYNC["AWS_PREFIX"] = GIT_CURRENT_SHA
+
+from mezzanine.utils.conf import set_dynamic_settings
+set_dynamic_settings(globals())
+

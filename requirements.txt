@@ -54,7 +54,8 @@ django-balancer
 django-sentry
 redis==2.2.4
 
-Mezzanine==0.11.5
+#Mezzanine==0.11.5
+-e git://github.com/GoodCloud/mezzanine.git#egg=mezzanine
 django-grappelli <=2.0
 django-filebrowser
 django-tinymce

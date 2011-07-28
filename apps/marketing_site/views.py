@@ -12,7 +12,7 @@ from django.core.validators import validate_email
 from email_list.models import EmailSubscription
 from email_list import GOODCLOUD_TIMES_KEY
 from marketing_site.forms import EmailForm
-from marketing_site.models import GoodCloudEmployee
+
 
 @render_to("marketing_site/home.html")
 def home(request):
@@ -26,7 +26,6 @@ def ssl_page(request):
 
 @render_to("marketing_site/about_us.html")
 def about_us(request):
-    all_employees = GoodCloudEmployee.objects.all()
     return locals()
 
 @render_to("marketing_site/features.html")

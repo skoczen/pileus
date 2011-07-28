@@ -1,6 +1,6 @@
 {% extends "marketing_site/base.html" %}
-{% load i18n generic_fields friendly_data_formatting  %}
-{% block title %}Membership management features that small nonprofits actually need.{% endblock %}
+{% load i18n  %}
+{% block meta_title %}Membership management features that small nonprofits actually need.{% endblock %}
 {% block description %}We built GoodCloud collaboratively with small nonprofits, to do the things you do every day. Contact, volunteer, and donor tracking - it's all here.{% endblock %}
 
 
@@ -190,7 +190,7 @@
 	</div>		
 </div>
 
-<a href="{% url accounts:signup %}" class="page_action png_bg">Try GoodCloud for Free!</a>
+<a href="{% url signup %}" class="page_action png_bg">Try GoodCloud for Free!</a>
 <div class="clearfix"></div>
 
 {% endblock %}

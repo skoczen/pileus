@@ -55,10 +55,9 @@ MIDDLEWARE_CLASSES = (
     'johnny.middleware.QueryCacheMiddleware',
     'johnny.middleware.CommittingTransactionMiddleware',
 
-    "mezzanine.core.middleware.DeviceAwareUpdateCacheMiddleware",
+    # "mezzanine.core.middleware.DeviceAwareUpdateCacheMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     "django.contrib.redirects.middleware.RedirectFallbackMiddleware",
@@ -68,7 +67,7 @@ MIDDLEWARE_CLASSES = (
     
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
-    "mezzanine.core.middleware.DeviceAwareFetchFromCacheMiddleware",
+    # "mezzanine.core.middleware.DeviceAwareFetchFromCacheMiddleware",
     "mezzanine.core.middleware.AdminLoginInterfaceSelector",
 )
 
@@ -155,8 +154,6 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'django_nose',
     'djcelery',
-    'taggit',
-    'taggit_templatetags',
     'django_jenkins',
     'django_ses',
     'mediasync',
@@ -165,7 +162,6 @@ INSTALLED_APPS = (
 
     'marketing_site',
     'email_list',
-    'rewrite',
 
     'djangosanetesting',
 )
@@ -353,7 +349,4 @@ MEDIASYNC['SERVE_REMOTE'] = True
 # Name of the current theme to host during theme development.
 # THEME = ""
 
-
-from mezzanine.utils.conf import set_dynamic_settings
-set_dynamic_settings(globals())
 

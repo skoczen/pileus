@@ -1,6 +1,6 @@
 {% extends "marketing_site/base.html" %}
-{% load i18n generic_fields friendly_data_formatting  %}
-{% block title %}Testimonials and Reviews: Staff and volunteers love using GoodCloud!{% endblock %}
+{% load i18n %}
+{% block meta_title %}Testimonials and Reviews: Staff and volunteers love using GoodCloud!{% endblock %}
 {% block description %}GoodCloud users rave about how easy it is to use, and how it's helping their organizations run more efficently. See what they had to say!{% endblock %}
 {% block extra_body %}class="praise"{% endblock %}
 
@@ -30,6 +30,6 @@
 
 
 
-<a href="{% url accounts:signup %}" class="page_action png_bg">Discover what you love with a Free Trial!</a>
+<a href="{% url signup %}" class="page_action png_bg">Discover what you love with a Free Trial!</a>
 
 {% endblock %}

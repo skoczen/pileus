@@ -42,7 +42,7 @@ STATIC_ROOT = MEDIA_ROOT
 # ADMIN_MEDIA_PREFIX = "%sadmin/" % (MEDIA_URL)
 ADMIN_MEDIA_PREFIX = "/admin-media/"
 FAVICON_URL = "%simages/favicon.png" % MEDIA_URL
-
+ADMIN_MEDIA_PREFIX = STATIC_URL + "grappelli/"
 
 BROKER_HOST = "int-Redis.agoodcloud.com"  # Maps to redis host.
 BROKER_VHOST = "5"                       # Maps to database number.
@@ -75,3 +75,8 @@ try:
 except:
     GIT_CURRENT_SHA = Repo(PROJECT_ROOT).head.reference.commit.hexsha
 MEDIASYNC["AWS_PREFIX"] = GIT_CURRENT_SHA
+
+
+from mezzanine.utils.conf import set_dynamic_settings
+set_dynamic_settings(globals())
+

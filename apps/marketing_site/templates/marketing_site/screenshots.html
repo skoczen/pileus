@@ -1,6 +1,6 @@
 {% extends "marketing_site/base.html" %}
-{% load i18n generic_fields friendly_data_formatting  %}
-{% block title %}Screenshots - see what easy to use for nonprofits looks like.{% endblock %}
+{% load i18n %}
+{% block meta_title %}Screenshots - see what easy to use for nonprofits looks like.{% endblock %}
 {% block description %}Watch a video interview with GoodCloud's CEO, and see how it helps nonprofits organize and run more easily!{% endblock %}
 
 {% block css %}{{block.super}}
@@ -131,7 +131,7 @@ $(function(){
 
 		</div>
 
-		<p>Here's a few pages from within GoodCloud. Of course, the best way to experience them is to <a href="{% url accounts:signup %}">sign up for a free trial!</a>  No risk, no credit card.  We invite you to see these screens with your own donors and volunteers, and see if GoodCloud really isn't the easiest solution you've used.</p>
+		<p>Here's a few pages from within GoodCloud. Of course, the best way to experience them is to <a href="{% url signup %}">sign up for a free trial!</a>  No risk, no credit card.  We invite you to see these screens with your own donors and volunteers, and see if GoodCloud really isn't the easiest solution you've used.</p>
 
 
 	</div>
@@ -139,6 +139,6 @@ $(function(){
 
 
 <div class="clearfix"></div>
-<a href="{% url accounts:signup %}" class="page_action png_bg">Now, try it out yourself!</a>
+<a href="{% url signup %}" class="page_action png_bg">Now, try it out yourself!</a>
 
 {% endblock %}
