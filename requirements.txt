@@ -1,0 +1,62 @@
+pip > 1.0
+fabric
+mercurial
+mysql-python
+python-dateutil <2.0
+PIL
+python-memcached
+django >=1.3
+gunicorn
+
+pyparsing
+django-xmlrpc
+akismet
+BeautifulSoup
+-e git://github.com/GoodCloud/django-ajax-uploader.git#egg=ajaxuploader
+
+django-extensions
+-e git://github.com/skoczen/qi-toolkit.git#egg=qi-toolkit  > 0.3.1
+python-crontab
+django-analytical
+
+django-pagination
+sorl-thumbnail
+tagging
+lorem-ipsum-generator
+nose
+ipython
+django-nose
+nose-exclude
+django-nose-selenium
+-e git://github.com/Almad/django-sane-testing.git#egg=djangosanetesting
+
+south
+celery
+django-celery
+-e git://github.com/kmmbvnr/django-jenkins.git#egg=django-jenkins
+coverage >= 3.4
+-e git://github.com/skoczen/nose-xcover.git#egg=nosexcover
+
+django-taggit
+django-taggit-templatetags
+boto
+django-ses
+#django-storages
+-e hg+https://bitbucket.org/david/django-storages#egg=storages
+django-mediasync
+slimmer
+
+gitpython
+django-debug-toolbar
+-e git://github.com/gintas/django-picklefield.git#egg=django-picklefield
+johnny-cache
+django-balancer
+django-sentry
+redis==2.2.4
+
+Mezzanine==0.11.5
+django-grappelli <=2.0
+django-filebrowser
+django-tinymce
+-e git://github.com/skoczen/pychargify.git#egg=pychargify
+-e git://github.com/GoodCloud/django-longer-username.git#egg=longerusername

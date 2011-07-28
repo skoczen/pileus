@@ -1,0 +1,5 @@
+from dev import *
+
+DEBUG = False
+TEMPLATE_DEBUG = DEBUG
+MEDIASYNC['EMULATE_COMBO'] = True

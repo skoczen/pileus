@@ -1,0 +1,30 @@
+*.pyc
+*.pyo
+*.swp
+.svn
+.DS_Store
+db/core*
+pip-log.txt
+db/full_backup.json
+
+media/cms
+media/admin
+media/cache
+media/cache/*
+media/goodcloud_people/*
+
+media/logos/*
+mycelium/reports
+mycelium.sublime-project
+mycelium/nosetests.xml
+mycelium/apps/coverage.xml
+mycelium/.coverage
+mycelium/settings.py
+media/_cache
+media/_goodcloud_people
+media/_logos
+mycelium/"
+source/goodcloud potential icons/Financial.set
+source/goodcloud potential icons/fatcow-hosting-icons-2000
+media/_admin
+media/.admin
