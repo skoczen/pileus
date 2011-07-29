@@ -78,7 +78,6 @@ body.home_page .page_header {
     clear: both;
 
 	margin-top: 0px;
-
 }
 
 
@@ -95,6 +94,10 @@ body.home_page .page_header {
 	color: #4e585e;
 	display: block;
 }
+#section .tab_content.blog {
+	width: 70%;
+}
+
 .tab_subheading {
 	font-size: 30px;
 	color: #0085d1;
@@ -737,7 +740,7 @@ social_links {
 	font-size: 15px;
 	color: #333;
 	display: block;
-	width: 80%;
+	width: 100%;
 	margin: 5px auto 30px auto;
 	padding: 20px;
 
@@ -955,12 +958,23 @@ social_links {
 #example_people #will .name_and_role {
 	background-image: url("../images/marketing-will-120.png");
 }
-#screenshot_gallery {
+.blog_post .thumbnail_gallery {
+	width: 90%;
+}
+.blog_post .thumbnail_gallery .tn3-gallery {
+	box-shadow: 		0px;
+  	-moz-box-shadow:	0px;
+  	-khtml-box-shadow: 	0px;
+  	-webkit-box-shadow: 0px;
+  	background: transparent;
+}
+
+.thumbnail_gallery {
 	margin-bottom: 60px;
 	height: 600px;
 	width: 100%;
 }
-#screenshot_gallery .tn3-gallery {
+.thumbnail_gallery .tn3-gallery {
 	width: 100% !important;
 	padding: 20px;
 	background-color: transparent;
@@ -972,7 +986,7 @@ social_links {
   	-khtml-box-shadow: 	1px 1px 2px rgba(0,0,0,0.35);
   	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.35);	
 }
-#screenshot_gallery .tn3-image {
+.thumbnail_gallery .tn3-image {
 	display: block !important;
 	width: 90%;
 	margin: 0px;
@@ -987,7 +1001,7 @@ social_links {
 	display: none !important;
 }
 
-#screenshot_gallery .tn3-full-image {
+.thumbnail_gallery .tn3-full-image {
 	position: relative !important;
 	width: 90% !important;
 	height: auto !important;
@@ -995,7 +1009,7 @@ social_links {
 	margin: 0px auto;
 	left: 0px !important;
 }
-#screenshot_gallery .tn3-full-image img {
+.thumbnail_gallery .tn3-full-image img {
 	top: 0px !important;
 	width: auto !important;
 	height: auto !important;
@@ -1012,30 +1026,30 @@ social_links {
 }
 
 
-#screenshot_gallery .tn3-text-bg {
+.thumbnail_gallery .tn3-text-bg {
 	top: 0px;
 }
-#screenshot_gallery .tn3-image {
+.thumbnail_gallery .tn3-image {
 	width: 100% !important;
 	height: 600px !important;
 }
-#screenshot_gallery .tn3-in-image {
+.thumbnail_gallery .tn3-in-image {
 	top: 0px !important;
 	padding-top: 90px;
 	width: 100% !important;
 	height: 510px !important;
 
 }
-#screenshot_gallery .tn3-image-in {
+.thumbnail_gallery .tn3-image-in {
 	margin: 90px auto 0px auto;
 	width: 98% !important;
 	left: 0px;
 }
-#screenshot_gallery .tn3-text-bg {
+.thumbnail_gallery .tn3-text-bg {
 	background: none;
 	padding: 0px;
 }
-#screenshot_gallery .tn3-in-image .tn3-image-title {
+.thumbnail_gallery .tn3-in-image .tn3-image-title {
 	padding: 0px 5px;
 	font-size: 18px;
 	font-family: inherit;
@@ -1044,7 +1058,7 @@ social_links {
 	line-height: 1.4em;
 }
 
-#screenshot_gallery .tn3-in-image .tn3-image-description {
+.thumbnail_gallery .tn3-in-image .tn3-image-description {
 	font-size: 16px;	
 	font-weight: normal;
 	font-style: normal;
@@ -1056,41 +1070,41 @@ social_links {
 .t3n-show-albums {
 	display: none;
 }
-#screenshot_gallery .tn3-controls-bg {
+.thumbnail_gallery .tn3-controls-bg {
 	background: none;
 	display: none;
 }
-#screenshot_gallery .tn3-thumbs {
+.thumbnail_gallery .tn3-thumbs {
 	background: none;
 	width: 100% !important;
 	left: 0px;
 	height: 50px;
 	display: none;
 }
-#screenshot_gallery .tn3-fullscreen, #screenshot_gallery .tn3-play, #screenshot_gallery .tn3-count, #screenshot_gallery .tn3-prev-page, #screenshot_gallery .tn3-next-page {
+.thumbnail_gallery .tn3-fullscreen, .thumbnail_gallery .tn3-play, .thumbnail_gallery .tn3-count, .thumbnail_gallery .tn3-prev-page, .thumbnail_gallery .tn3-next-page {
 	display: none;
 }
-#screenshot_gallery ul {
+.thumbnail_gallery ul {
 	width: 100% !important;
 	left: 0px !important;
 	height: 40px;
 }
-#screenshot_gallery .tn3_v {
+.thumbnail_gallery .tn3_v {
 	top: 40% !important; 
 	background-position: 0 0;
 	background-repeat: no-repeat;
 }
-#screenshot_gallery .tn3-prev  {
+.thumbnail_gallery .tn3-prev  {
 	left: 0px;
 	background-image: url("../images/marketing-gallery-left-arrow.png");
 	height: 50px;
 }
-#screenshot_gallery .tn3-next  {
+.thumbnail_gallery .tn3-next  {
 	background-image: url("../images/marketing-gallery-right-arrow.png");
 	height: 50px;
 }
 
-#screenshot_gallery li {
+.thumbnail_gallery li {
 	list-style-type: none;
 	padding: 20px;
 }

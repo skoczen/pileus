@@ -14,33 +14,34 @@
 {{ blog_post.description }}
 {% endmetablock %}{% endblock %}
 
-{% block title %}
-{% editable blog_post.title %}{{ blog_post.title }}{% endeditable %}
-{% endblock %}
 
-{% block extra_head %}
-<script type="text/javascript"
-    src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
-</script>
+{% block css %}{{block.super}}
+{% css "css/contrib/tn3/tn3.css" %}
+{% endblock %}
+{% block javascript %}{{block.super}}
+
+{% js "js/lib/jquery.tn3lite.min.js" %}
 <script type="text/javascript">
     $(function() {
         $('.reply').click(function() {
             $(this).next('.comment').toggle();
         });
     });
+    $('.p_image_embed').tn3({
+        width: $(document).width() * 0.66 - 40,
+        height: 600,
+        shaderColor: "#766b43",
+
+    });	
 </script>
 {% endblock %}
 
-{% block breadcrumb_menu %}
-<ul>
-    <li><a href="{% url home %}">{% trans "Home" %}</a> &gt;</li>
-    <li><a href="{% url blog_post_list %}">{{ blog_page.title }}</a> &gt;</li>
-    <li>{{ blog_post.title }}</li>
-</ul><br />
-{% endblock %}
+{% block breadcrumb_menu %}{% endblock %}
+{% block title %}{% endblock %}
 
 {% block main %}
-
+<div class="blog_post">
+<h2>{% editable blog_post.title %}{{ blog_post.title }}{% endeditable %}</h2>
 <p>
     <em>
         {% trans "Posted by" %}:
@@ -64,7 +65,7 @@
 {% editable blog_post.content %}
 {{ blog_post.content|richtext_filter|safe }}
 {% endeditable %}
-
+</div>
 {% keywords_for blog_post as tags %}
 {% if tags %}
 <div class="tags">
@@ -78,7 +79,7 @@
 </div>
 {% endif %}
 
-<div class="rating">{% rating_for blog_post %}</div>
+{# <div class="rating">{% rating_for blog_post %}</div> #}
 
 <div class="share">
 {% set_short_url_for blog_post %}
@@ -89,11 +90,12 @@
 </div>
 
 <div id="comments">
-{% if use_disqus %}
-{% include "generic/includes/disqus_comments.html" %}
-{% else %}
+{# {% if use_disqus %} #}
 {% comments_for blog_post %}
-{% endif %}
+{% include "generic/includes/disqus_comments.html" %}
+{# {% else %} #}
+{# {% comments_for blog_post %} #}
+{# {% endif %} #}
 </div>
 
 {% endblock %}

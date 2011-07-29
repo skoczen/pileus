@@ -1,5 +1,7 @@
-{% extends "base.html" %}
+{% extends "marketing_site/base.html" %}
 {% load i18n mezzanine_tags blog_tags %}
+
+{% block page_header %}Real people, real voices.{% endblock %}
 
 {% block meta_title %}{{ blog_page.title }}{% endblock %}
 
@@ -13,6 +15,16 @@
 {% block meta_description %}{% metablock %}
 {{ blog_page.description }}
 {% endmetablock %}{% endblock %}
+
+{% block page_content %}
+<div id="section" class=" features">
+	<ul class="nav_links png_bg">
+	 	<li><a href="{% url marketing_site:newsletter %}">Newsletter</a></li>
+	 	<li class="ui-tabs-selected ui-state-active"><a href="{% url blog %}">Blog</a></li>
+	 	{# <li><a href="{% url blog %}">Press</a></li> #}
+ 	</ul>
+
+	<div class="tab_content blog" >
 
 {% block title %}
 {% editable blog_page.title %}{{ blog_page.title }}{% endeditable %}
@@ -42,6 +54,7 @@
 
 
 {% for blog_post in blog_posts.object_list %}
+<div class="blog_post">
 {% editable blog_post.title blog_post.publish_date %}
 <h2 class="blog-post-title">
     <a href="{% url blog_post_detail blog_post.slug %}">{{ blog_post.title }}</a>
@@ -77,6 +90,8 @@
     </a>
     {% endif %}
 </p>
+</div>
+
 {% endfor %}
 
 {% pagination_for blog_posts %} 
@@ -87,7 +102,21 @@
 
 {% endblock %}
 
-{% block right_panel %}
-{% include "blog/includes/filter_panel.html" %}
+
+    <div id="grid-right" class="grid_3 grid">
+        {% include "includes/search.html" %}
+        {% block right_panel %}
+            {% if "mezzanine.twitter"|is_installed %}
+            {% include "twitter/tweets.html" %}
+            {% endif %}
+        {% endblock %}
+        <p class="mezzanine">
+            <a href="{% url set_device "mobile" %}?next={{ request.path }}">
+                {% trans "View Mobile Site." %}
+            </a>
+        </p>
+    </div>
+
+</div></div>
 {% endblock %}
 

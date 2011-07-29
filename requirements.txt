@@ -61,3 +61,5 @@ django-filebrowser
 django-tinymce
 -e git://github.com/skoczen/pychargify.git#egg=pychargify
 -e git://github.com/GoodCloud/django-longer-username.git#egg=longerusername
+simplejson
+feedparser

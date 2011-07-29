@@ -9,8 +9,9 @@
   {% analytical_head_top %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{% block title %}{% endblock %}</title>
+  <title>{% block meta_title %}{% endblock %}</title>
   <meta name="description" content="{% block description %}{% endblock %}">
+  <meta name="keywords" content="{% block meta_keywords %}{% endblock %}" /> 
   <meta name="author" content="GoodCloud - Software for Nonprofits">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="{{FAVICON_URL}}">
@@ -36,6 +37,9 @@
   {% js "js/lib/dd_belatedpng.js" %}
   <script>DD_belatedPNG.fix('img, .png_bg');</script>
 <![endif]-->
+{% if ENV == "DEV" %}
+<script>var disqus_developer = 1;</script>
+{% endif %}
 {% endblock %}
 </body>
 {% endblock %}
