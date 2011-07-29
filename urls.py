@@ -2,7 +2,6 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.conf import settings
 import marketing_site.views as marketing_views
-import mezzanine.blog.views as mezzanine_views
 admin.autodiscover()
 
 from django.template import add_to_builtins
