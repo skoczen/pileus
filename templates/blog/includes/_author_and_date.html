@@ -1,0 +1,9 @@
+<div class="name_and_publish_date">
+	<div class="author_name">
+	    {% with blog_post.user as author %}
+	    <a href="{% url blog_post_list_author author %}"
+	        >{{ author.get_full_name|default:author.username }}</a>
+	    {% endwith %}
+	</div>
+	<div class="publish_date">{{ blog_post.publish_date|date }}</div>
+</div>

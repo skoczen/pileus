@@ -1,31 +1,31 @@
 
-{% load twitter_tags i18n %}
+{% load twitter_tags i18n friendly_data_formatting %}
 
 {% tweets_for_user "agoodcloud" 5 as tweets %}
 
 {% if tweets %}
-<h3>{% trans "Recent Tweets" %}</h3>
+<h3 class="side_header recent_tweets_header">{% trans "Recent Tweets" %}</h3>
 <ul class="tweets">
     {% for tweet in tweets %}
     <li>
 
-        <img src="{{ tweet.profile_image_url }}"><a
-            href="http://twitter.com/{{ tweet.user_name }}"
-            >{{ tweet.user_name }}</a>
-            {% ifnotequal tweet.user_name tweet.full_name %}<span class="name">{{ tweet.full_name }}</span>{% endifnotequal %}
-
+ 		<div class="tweet_author">
         {% if tweet.is_retweet %}
-        <p><span class="recycle">&#x267B;</span>
-        <img class="retweet" src="{{ tweet.retweeter_profile_image_url }}"><a
-            href="http://twitter.com/{{ tweet.retweeter_user_name }}"
-            >{{ tweet.retweeter_full_name }}</a></p>
+        <div class="retweet_icon"></div>
         {% endif %}
-
-        <div>{{ tweet.text|safe }}</div>
-
-        <span class="timespan">
-            {{ tweet.created_at|timesince }} {% trans "ago" %}
+        <a href="http://twitter.com/{{ tweet.user_name }}">
+         	{# <img src="{{ tweet.profile_image_url }}"> #}
+			{% ifnotequal tweet.user_name tweet.full_name %}<span class="name">{{ tweet.full_name }}</span>{% endifnotequal %}
+           </a>
+        {# <img class="retweet" src="{{ tweet.retweeter_profile_image_url }}"> #}
+		<span class="timespan">
+            {{ tweet.created_at|pretty_timesince }}
         </span>
+		</div>
+
+        <div class="tweet_body">{{ tweet.text|safe }}</div>
+
+        
     </li>
     {% endfor %}
 </ul>
