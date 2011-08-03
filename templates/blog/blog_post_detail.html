@@ -29,11 +29,6 @@
 {% editable blog_post.content %}
 {{ blog_post.content|richtext_filter|safe }}
 {% endeditable %}
-</div>
-
-
-{# <div class="rating">{% rating_for blog_post %}</div> #}
-
 <div class="share">
 {% set_short_url_for blog_post %}
 {% trans "Share this on" %}:
@@ -50,6 +45,12 @@
 {# {% comments_for blog_post %} #}
 {# {% endif %} #}
 </div>
+</div>
+
+
+{# <div class="rating">{% rating_for blog_post %}</div> #}
+
+
 
 {% endblock %}
 

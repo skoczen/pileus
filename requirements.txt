@@ -63,3 +63,4 @@ django-tinymce
 -e git://github.com/GoodCloud/django-longer-username.git#egg=longerusername
 simplejson
 feedparser
+-e git@github.com:GoodCloud/django-social-bookmarking.git#social_bookmarking
