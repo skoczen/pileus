@@ -42,6 +42,7 @@ def screenshots(request):
 
 @render_to("marketing_site/newsletter.html")
 def newsletter(request):
+    section = "newsletter"
     form = EmailForm()
     save_success=False
     newsletter_subscriber = request.session.get('newsletter_subscriber', False)

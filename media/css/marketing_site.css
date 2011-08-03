@@ -1293,8 +1293,13 @@ social_links {
   	color: #454545;
 }
 .newsletter a.issue:hover {
+	
+	margin: 21px 0px 0px 1px;
 	text-decoration: none;
-	background-color: #F2F2F2;
+	box-shadow: 		1px 1px 2px rgba(0,0,0,0.35);
+  	-moz-box-shadow:	1px 1px 2px rgba(0,0,0,0.35);
+  	-khtml-box-shadow: 	1px 1px 2px rgba(0,0,0,0.35);
+  	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.35);
 }
 .newsletter .issue .cover_image {
 	float: left;
